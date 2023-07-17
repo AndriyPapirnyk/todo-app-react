@@ -1,11 +1,15 @@
+import React, { useState } from 'react';
 import './TodoForm.css';
 
-function TodoForm() {
+export const TodoForm = ({addTodo}) => {
+
+    const [value, setValue] = useState('');
+
   return (
-    <div className="todoForm">
-      
-    </div>
+    <form action='submit' className="todoForm" onSubmit={(e) => {e.preventDefault(); addTodo(value); setValue('')}}>
+      <input value={value} type="text" placeholder='Write todo...' onChange={(e) => setValue(e.target.value)}/>
+      <button type='submit'>Add</button>
+    </form>
   );
 }
 
-export default TodoForm;
