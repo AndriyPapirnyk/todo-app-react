@@ -34,6 +34,7 @@ export const Main = () => {
 
   return (
     <main className="main">
+        <h1>Todo App</h1>
         <TodoForm addTodo={addTodo} />
         {todos.map((todo, index) => (
             todo.edited ? (

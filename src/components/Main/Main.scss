@@ -1,0 +1,16 @@
+.main{
+    width: 500px;
+    height: auto;
+    background-color: rgb(17, 19, 37);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    border-radius: 15px;
+    @media screen and (max-width: 530px) {
+        width: 100%;
+    }
+    h1{
+        color: #fff;
+    }
+}
